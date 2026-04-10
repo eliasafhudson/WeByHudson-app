@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@theme {
+  --color-primary: #092721;
+  --color-secondary: #F8C44F;
+  --color-green: #36654F;
+  --color-gary: #E5E5E5;
+
+}
+@import "tailwindcss";
+body{
+      font-family: "Roboto Flex", sans-serif;
+      background-color: rgb(255, 255, 255);
+  background-image: 
+    radial-gradient(circle at 10% 30%,rgba(9, 39, 33, 0.72) 0%, transparent 20%),
+    radial-gradient(circle at 95% 70%, rgba(9, 39, 33, 0.72) 0%, transparent 20%);
+
+  height: 100vh;
+  width: 100%;
+}
