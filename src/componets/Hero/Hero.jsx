@@ -2,7 +2,7 @@ import React from 'react'
 import Personaje from '../../assets/personaje.png'
 import Fondo from '../../assets/Baner.png'
 import {motion} from 'framer-motion'
-import { slipeUp } from '../../utility/animation'
+import { slipeUp, slipeInFromSide} from '../../utility/animation'
 
     
 function Hero() {
@@ -22,22 +22,48 @@ const bgImagen ={
 
      {/* Contenido del Hero */}
            {/* Imagen */}
-        <div>
-          <img src={Personaje} alt="Personaje" className='w-[600px] h-auto ml-0 md:ml-10 '/>
-        </div>
+        <motion.div
+          variants={slipeInFromSide('left', 0.5)}
+          initial="initial"
+          animate="animate"
+          className='flex justify-center items-center'
+        >
+          <motion.img 
+            animate={{ y: [0, -15, 0] }}
+            transition={{
+             duration: 3.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+      }}
+          src={Personaje} alt="Personaje" className='w-[85%] sm:w-[600px] h-auto ml-0 md:ml-10 align-center'/>
+        </motion.div>
 
         {/* Texto */}
         <div>
-          <h1 className='text-6xl  text-shadow-lg text-center md:pt-20 pb-12 md:pr-10 md:text-right  text-secondary '
+          <motion.h1 
+          variants={slipeUp(0.2)}
+          initial="initial"
+          animate="animate"
+          className='md:text-6xl text-5xl text-shadow-lg text-center md:pt-20 md:pr-10 md:text-right  text-secondary '
           >Diseñamos y desarrollamos 
-          páginas web profesionales</h1>
-            <p className='text-primary text-left text-lg  px-5 md:px-0'>Que mejor forma de crecer en tu negocio que una página web 100% personalizada.</p> 
-        <div className='flex justify-center pt-10'>
-         <a href="" className='bg-primary py-3 px-15 rounded-xl text-white shadow-xl  hover:bg-green transition-all duration-300'>Empieza hoy</a>
-        </div>
+          páginas web profesionales</motion.h1>
+            <motion.p 
+            variants={slipeUp(0.3)}
+            initial="initial"
+            animate="animate"
+            className='text-primary text-left sm:text-lg md:py-12 py-3 px-5 md:px-0  '>Que mejor forma de crecer en tu negocio que una página web 100% personalizada.
+            </motion.p> 
+        <motion.div 
+        variants={slipeUp(0.5)}
+          initial="initial"
+          animate="animate"
+        className='flex justify-center gap-4'>
+         <a 
+          
+         href="" className='bg-primary sm:py-3 py-1 px-15 sm:text-sm  rounded-xl text-white shadow-xl  hover:bg-green transition-all duration-300'>Empieza hoy</a>
+        </motion.div>
         </div>
       </div>
-      <p></p>
     </section>
   )
 }

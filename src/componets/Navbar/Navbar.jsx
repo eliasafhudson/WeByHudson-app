@@ -29,7 +29,8 @@ const Navbar = () => {
       scrolled 
         ? 'bg-primary shadow-sm' 
         : 'bg-opacity-30 backdrop-blur-xl'
-    }`}>      <div className='flex relative justify-between items-center md:px-15 md:py-6 py-4 px-3 md:bg-transparent bg-primary'> 
+    }`}>      
+    <div className='flex relative justify-between items-center md:px-15 md:py-6 py-4 px-3 md:bg-transparent bg-primary'> 
 
         {/* Logo navbar */}
         <div>
