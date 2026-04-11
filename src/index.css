@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 @theme {
-  --color-primary: #092721;
-  --color-secondary: #F8C44F;
-  --color-green: #36654F;
-  --color-gary: #9B9B9B;
+  --color-primary: #0D1117;
+  --color-secondary: #2EA043;
+  --color-green: #E6EDF3;
+  --color-four: #3FB950;
+  --color-five: #161B22;
+  --color-six: #818181;
 
 }
 @import "tailwindcss";
 
 @layer components {
   .primary-btn {
-    @apply bg-primary text-white cursor-pointer 
-     hover:bg-green transition-all duration-300
+    @apply border border-secondary text-green cursor-pointer 
+      hover:bg-four/20 transition-all duration-300
     py-2 px-4 rounded-lg shadow-lg my-3 mx-2;
   }
 }
 
 body{
-      font-family: "Roboto Flex", sans-serif;
-      background-color: rgb(255, 255, 255);
+       font-family: "Plus Jakarta Sans", sans-serif;
+      background-color:rgba(22, 27, 34, 0.99);
   
 }

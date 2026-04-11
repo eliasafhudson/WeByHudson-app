@@ -9,7 +9,7 @@ const Why =[
     "Webs que cargan en segundos. No pierdas clientes por lentitud.",
     image: velocidadImg,
     icon: "bi bi-speedometer2",
-    bgcolor: "bg-green"
+    bgcolor: "bg-secondary"
     },
      {
     name: "100% Responsive",
@@ -17,7 +17,7 @@ const Why =[
     "Tu sitio se verá perfecto en celulares, tablets y computadoras.",
     image: velocidadImg,
     icon: "bi bi-tablet",
-    bgcolor: "bg-green"
+    bgcolor: "bg-secondary"
     },
      {
     name: "SEO Ready",
@@ -25,7 +25,7 @@ const Why =[
     "Estructura optimizada para que Google te encuentre fácilmente.",
     image: velocidadImg,
     icon: "bi bi-search",
-    bgcolor: "bg-green"
+    bgcolor: "bg-secondary"
     },
      {
     name: "Diseño Único",
@@ -33,7 +33,7 @@ const Why =[
     "Nada de plantillas aburridas. Diseños personalizados para tu marca.",
     image: velocidadImg,
     icon: "bi bi-palette-fill",
-    bgcolor: "bg-green"
+    bgcolor: "bg-secondary"
     }
 ]
 

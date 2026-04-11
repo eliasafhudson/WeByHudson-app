@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-import Logo from '../../assets/logo h.png'
+import Logo from '../../assets/logot.png'
 
 const navbarlinks = [
   {id: 1, name: 'Inicio',Link: '/'},
@@ -28,17 +28,22 @@ const Navbar = () => {
   <nav className={`fixed top-0 left-0 w-full z-10 transition-colors duration-400 ${
       scrolled 
         ? 'bg-primary shadow-lg' 
-        : 'bg-opacity-30 backdrop-blur-xl shadow-sm'
+        : 'bg-five backdrop-blur-xl'
     }`}>      
     <div className='flex relative justify-between items-center md:px-15 md:py-6 py-4 px-3 md:bg-transparent bg-primary '> 
 
         {/* Logo navbar */}
-        <div>
-            <img src={Logo} alt="Logo" className='w-[200px] px-3 '/>
+        <div className='flex items-center space-x-2'>
+            <img src={Logo} alt="Logo" className='w-[150px] px-3 '/>
+            <h1 className='text-1xl sm:text-3xl font-bold px-3
+             text-secondary '> 
+             <span className="text-white">We</span> 
+             <span className="text-six">By</span> 
+            <span className="text-four">Hudson</span></h1>
           </div>
 
         {/* Icono de menú para dispositivos móviles */}
-        <button onClick={toggleMenu} className='md:hidden text-white text-2xl focus:outline-none'>
+        <button onClick={toggleMenu} className='md:hidden text-green text-2xl focus:outline-none'>
            <svg className='w-6 h-6'
                 fill='none'
                 stroke='currentColor'
@@ -62,7 +67,7 @@ const Navbar = () => {
           <ul className='flex sm:space-x-15 space-x-2'>
             {navbarlinks.map((link) => (
               <li key={link.id} >
-                <a className='text-secondary md:text-lg text-sm hover:text-secondary 
+                <a className='text-green md:text-lg text-sm hover:text-secondary 
                 py-9 hover:border-b-3  hover:border-secondary transition-all duration-100' 
                 href={link.Link}>{link.name}</a>
               </li>
@@ -73,8 +78,8 @@ const Navbar = () => {
         {/* Botón de cotización para escritorio */}
         <div className='hidden md:block'>
           <ul className='flex space-x-2'> 
-            <li className='bg-green px-4 py-2 md:mx-2 mx-10 rounded-lg hover:bg-emerald-900 transition-colors duration-300'>
-              <a href="https://wa.me/50764478682" target="_blank" rel="noopener noreferrer" className='text-white text-center md:text-lg text-sm hover:text-secondary transition-colors duration-300'>
+            <li className='px-4 py-2 md:mx-2 mx-10 rounded-lg border border-four/40 hover:bg-four/20 text-white transition-colors duration-300'>
+              <a href="https://wa.me/50764478682" target="_blank" rel="noopener noreferrer" className=' text-center md:text-lg text-sm '>
                 Cotiza Tu Web
               </a>
             </li>
