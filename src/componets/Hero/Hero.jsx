@@ -17,52 +17,59 @@ const bgImagen ={
 
 
   return (
-    <section style={bgImagen} className='h-screen w-full flex absolute items-center justify-center '>
-      <div className='grid grid-cols-1 md:grid-cols-2 mt-20'>
-
-     {/* Contenido del Hero */}
-           {/* Imagen */}
+    <section style={bgImagen}  className='w-full pt-25' >
+      <div className='container grid grid-cols-1 
+      sm:grid-cols-2 items-center space-y-2 py-12 
+      sm:py-0 sm:h-[600px] mx-auto'>
+          {/*contenedor de la imagen */}
         <motion.div
           variants={slipeInFromSide('left', 0.5)}
           initial="initial"
           animate="animate"
-          className='flex justify-center items-center'
-        >
-          <motion.img 
+          className='flex justify-center items-center'>
+            <motion.img 
             animate={{ y: [0, -15, 0] }}
             transition={{
              duration: 3.5,
             repeat: Infinity,
             ease: "easeInOut",
-      }}
-          src={Personaje} alt="Personaje" className='w-[85%] sm:w-[600px] h-auto ml-0 md:ml-10 align-center'/>
+      }} 
+            src={Personaje} alt="Personaje" 
+            className='w-full md:max-w-lg mx-auto' />
         </motion.div>
-
-        {/* Texto */}
         <div>
-          <motion.h1 
+          <div className=' text-center sm:text-right mx-3 space-y-2 grid justify-items-center 
+          sm:justify-items-start'>
+            <motion.p 
+          variants={slipeUp(0.4)}
+          initial="initial"
+          animate="animate" 
+            className='uppercase 
+            text-primary w-full'>Bienvenidos a Webyhudson</motion.p>
+            <motion.p 
+          variants={slipeUp(0.3)}
+          initial="initial"
+          animate="animate" 
+            className='text-4xl md:text-6xl font-bold text-secondary/95'>Diseñamos y 
+            desarrollamos páginas web profesionales</motion.p>
+            <motion.p 
           variants={slipeUp(0.2)}
           initial="initial"
-          animate="animate"
-          className='md:text-6xl text-5xl text-shadow-lg text-center md:pt-20 md:pr-10 md:text-right  text-secondary '
-          >Diseñamos y desarrollamos 
-          páginas web profesionales</motion.h1>
-            <motion.p 
-            variants={slipeUp(0.3)}
-            initial="initial"
-            animate="animate"
-            className='text-primary text-left sm:text-lg md:py-12 py-3 px-5 md:px-0  '>Que mejor forma de crecer en tu negocio que una página web 100% personalizada.
-            </motion.p> 
-        <motion.div 
-        variants={slipeUp(0.5)}
+          animate="animate" 
+            className='text-lg md:text-xl text-gray-600'>
+              Que mejor forma de crecer en tu 
+              negocio que una pagiana web 100% personalizada
+            </motion.p>
+            <motion.a
+        variants={slipeInFromSide('right', 0.6)}
           initial="initial"
-          animate="animate"
-        className='flex justify-center gap-4'>
-         <a 
-          
-         href="" className='bg-primary sm:py-3 py-1 px-15 sm:text-sm  rounded-xl text-white shadow-xl  hover:bg-green transition-all duration-300'>Empieza hoy</a>
-        </motion.div>
-        </div>
+          animate="animate" href="#" 
+            className='inline-block primary-btn !px-6 mx-auto'>
+              Comenzemos
+            </motion.a>
+          </div>
+        </div> 
+      
       </div>
     </section>
   )

@@ -25,12 +25,12 @@ const Navbar = () => {
       }
 
   return (
-  <nav className={`fixed top-0 left-0 w-full z-50 transition-colors duration-400 ${
+  <nav className={`fixed top-0 left-0 w-full z-10 transition-colors duration-400 ${
       scrolled 
-        ? 'bg-primary shadow-sm' 
-        : 'bg-opacity-30 backdrop-blur-xl'
+        ? 'bg-primary shadow-lg' 
+        : 'bg-opacity-30 backdrop-blur-xl shadow-sm'
     }`}>      
-    <div className='flex relative justify-between items-center md:px-15 md:py-6 py-4 px-3 md:bg-transparent bg-primary'> 
+    <div className='flex relative justify-between items-center md:px-15 md:py-6 py-4 px-3 md:bg-transparent bg-primary '> 
 
         {/* Logo navbar */}
         <div>

@@ -5,17 +5,21 @@
   --color-primary: #092721;
   --color-secondary: #F8C44F;
   --color-green: #36654F;
-  --color-gary: #E5E5E5;
+  --color-gary: #9B9B9B;
 
 }
 @import "tailwindcss";
+
+@layer components {
+  .primary-btn {
+    @apply bg-primary text-white cursor-pointer 
+     hover:bg-green transition-all duration-300
+    py-2 px-4 rounded-lg shadow-lg my-3 mx-2;
+  }
+}
+
 body{
       font-family: "Roboto Flex", sans-serif;
       background-color: rgb(255, 255, 255);
-  background-image: 
-    radial-gradient(circle at 10% 30%,rgba(9, 39, 33, 0.72) 0%, transparent 20%),
-    radial-gradient(circle at 95% 70%, rgba(9, 39, 33, 0.72) 0%, transparent 20%);
-
-  height: 100vh;
-  width: 100%;
+  
 }
