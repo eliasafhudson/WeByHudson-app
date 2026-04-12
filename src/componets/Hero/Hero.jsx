@@ -33,7 +33,7 @@ const bgImagen ={
             className='inline-flex items-center gap-2 
             bg-secondary/5
             border border-secondary  text-secondary text-sm px-4 py-2 rounded-full w-fit mb-6 
-            '>Bienvenidos a Webyhudson</motion.p>
+            '>Bienvenidos a WeByHudson</motion.p>
             <motion.p 
           variants={slipeUp(0.3)}
           initial="initial"
@@ -45,7 +45,7 @@ const bgImagen ={
           variants={slipeUp(0.2)}
           initial="initial"
           animate="animate" 
-            className='text-lg md:text-xl text-gray-600'>
+            className='text-lg md:text-xl text-gray-400'>
               Que mejor forma de crecer en tu 
               negocio que una pagiana web 100% personalizada
             </motion.p>
@@ -66,7 +66,8 @@ const bgImagen ={
           variants={slipeInFromSide('left', 0.5)}
           initial="initial"
           animate="animate"
-          className='bg-five text-white text-sm font-semibold px-6 py-3 rounded-lg '>
+          className='bg-five text-white text-sm 
+          font-semibold px-6 py-3 rounded-lg '>
             {/* Tarjeta de código */}
           <div className="bg-[#0D1117] border border-[#30363D] rounded-xl p-5 w-72">
             <div className="flex gap-2 mb-4">
@@ -84,6 +85,7 @@ const bgImagen ={
               <p>
                 <span className="text-[#FFA657]">{"}"}</span>
                 <span className="text-[#8B949E]">;</span>
+                 <span className={`inline-block w-0.5 h-3.5 bg-[#2EA043] ml-0.5 align-middle transition-opacity animate-pulse`} />
               </p>
             </div>
           </div>

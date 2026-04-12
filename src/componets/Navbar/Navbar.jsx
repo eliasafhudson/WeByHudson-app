@@ -1,11 +1,12 @@
 import React,{useEffect, useState} from 'react'
 import Logo from '../../assets/logot.png'
+import {smoothScroll} from '../../utility/animation'
 
 const navbarlinks = [
-  {id: 1, name: 'Inicio',Link: '/'},
-  {id: 2, name: 'Precios',Link: '#'},
-  {id: 3, name: 'FaQs',Link: '#'},
-  {id: 4, name: 'Contactos',Link: '#'},
+  {id: 1, name: 'Servicios',Link: '#servicios'},
+  {id: 2, name: 'Precios',Link: '#precios'},
+  {id: 3, name: 'FaQs',Link: '#faqs'},
+  {id: 4, name: 'Contactos',Link: '#contactos'},
 ]
 
 const Navbar = () => {
@@ -30,16 +31,17 @@ const Navbar = () => {
         ? 'bg-primary shadow-lg' 
         : 'bg-five backdrop-blur-xl'
     }`}>      
-    <div className='flex relative justify-between items-center md:px-15 md:py-6 py-4 px-3 md:bg-transparent bg-primary '> 
+    <div className='flex relative justify-between items-center md:px-10 md:py-6 py-4 px-3 md:bg-transparent bg-primary '> 
 
         {/* Logo navbar */}
-        <div className='flex items-center space-x-2'>
-            <img src={Logo} alt="Logo" className='w-[150px] px-3 '/>
-            <h1 className='text-1xl sm:text-3xl font-bold px-3
+        <div className='mr-auto'>
+          <a href="/" className=' lg:flex items-center text-center space-x-2'>
+            <img src={Logo} alt="Logo" className='w-[150px] px-3 mx-auto '/>
+            <h1 className='text-1xl sm:text-3xl font-bold px-auto 
              text-secondary '> 
              <span className="text-white">We</span> 
-             <span className="text-six">By</span> 
-            <span className="text-four">Hudson</span></h1>
+             <span className="text-gray-400">By</span> 
+            <span className="text-four">Hudson</span></h1></a>
           </div>
 
         {/* Icono de menú para dispositivos móviles */}
@@ -63,11 +65,13 @@ const Navbar = () => {
         </button>
 
         {/* Links navbar desktop */}
-        <div className='hidden md:block'>
-          <ul className='flex sm:space-x-15 space-x-2'>
+        <div className='hidden md:block px-auto mx-auto'>
+          <ul className='flex lg:space-x-10 space-x-7 '>
             {navbarlinks.map((link) => (
               <li key={link.id} >
-                <a className='text-green md:text-lg text-sm hover:text-secondary 
+                <a
+                  onClick={() => smoothScroll(link.Link.slice(1))}
+                className='text-green lg:text-lg text-4sm hover:text-secondary 
                 py-9 hover:border-b-3  hover:border-secondary transition-all duration-100' 
                 href={link.Link}>{link.name}</a>
               </li>
@@ -76,10 +80,12 @@ const Navbar = () => {
         </div>
           
         {/* Botón de cotización para escritorio */}
-        <div className='hidden md:block'>
+        <div className='hidden md:block mx-auto'>
           <ul className='flex space-x-2'> 
-            <li className='px-4 py-2 md:mx-2 mx-10 rounded-lg border border-four/40 hover:bg-four/20 text-white transition-colors duration-300'>
-              <a href="https://wa.me/50764478682" target="_blank" rel="noopener noreferrer" className=' text-center md:text-lg text-sm '>
+            <li className='px-4 py-2 md:mx-2 mx-10 rounded-lg border
+             border-four/40 hover:bg-four/20 text-white transition-colors duration-300'>
+              <a href="https://wa.me/50764478682" target="_blank" rel="noopener noreferrer"
+               className=' text-center lg:text-lg text-sm '>
                 Cotiza Tu Web
               </a>
             </li>

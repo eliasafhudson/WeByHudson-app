@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "bootstrap-icons": "^1.13.1",
+    "lightswind": "^3.1.24",
     "motion": "^12.38.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
@@ -29,11 +30,5 @@
     "globals": "^17.4.0",
     "vite": "^8.0.4"
   },
-  "homepage": "https://eliasafhudson/WeByHudson-app",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  }
+  "homepage": "https://eliasafhudson/WeByHudson-app"
 }

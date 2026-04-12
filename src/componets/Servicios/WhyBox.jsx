@@ -4,56 +4,70 @@ import velocidadImg from '../../assets/velocidad.jpg'
 
 const Why =[
     {
-    name: "Velocidad Optimizada",
+    name: "Diseño web personalizado",
     description: 
-    "Webs que cargan en segundos. No pierdas clientes por lentitud.",
-    image: velocidadImg,
-    icon: "bi bi-speedometer2",
-    bgcolor: "bg-secondary"
-    },
-     {
-    name: "100% Responsive",
-    description: 
-    "Tu sitio se verá perfecto en celulares, tablets y computadoras.",
-    image: velocidadImg,
-    icon: "bi bi-tablet",
-    bgcolor: "bg-secondary"
-    },
-     {
-    name: "SEO Ready",
-    description: 
-    "Estructura optimizada para que Google te encuentre fácilmente.",
-    image: velocidadImg,
-    icon: "bi bi-search",
-    bgcolor: "bg-secondary"
-    },
-     {
-    name: "Diseño Único",
-    description: 
-    "Nada de plantillas aburridas. Diseños personalizados para tu marca.",
+    "Interfaces modernas, atractivas y enfocadas en convertir visitantes en clientes.",
     image: velocidadImg,
     icon: "bi bi-palette-fill",
-    bgcolor: "bg-secondary"
-    }
+    bgcolor: "bg-primary"
+    },{
+    name: "Desarrollo React",
+    description: 
+    "Aplicaciones web rápidas, escalables y construidas con las últimas tecnologías.",
+    image: velocidadImg,
+    icon: "bi bi-code-slash",
+    bgcolor: "bg-primary"
+    },
+     {
+    name: "Optimización SEO",
+    description: 
+    "Posiciona tu web en Google y atrae tráfico orgánico de calidad sin pagar anuncios.",
+    image: velocidadImg,
+    icon: "bi bi-search",
+    bgcolor: "bg-primary"
+    },
+     {
+    name: "Tienda Online",
+    description: 
+    "E-commerce profesional con carrito, pagos seguros y gestión de productos.",
+    image: velocidadImg,
+    icon: "bi bi-cart",
+    bgcolor: "bg-primary"
+    },
+    {
+    name: "Landing Pages",
+    description: 
+    "Páginas de aterrizaje de alta conversión para tus campañas y productos.",
+    image: velocidadImg,
+    icon: "bi bi-layers-fill",
+    bgcolor: "bg-primary"
+    },  
+    {
+    name: "Mantenimiento",
+    description: 
+    "Soporte continuo, actualizaciones y mejoras para que tu web siempre funcione perfecto.",
+    image: velocidadImg,
+    icon: "bi bi-gear-fill",
+    bgcolor: "bg-primary"
+    },
 ]
 
 const WhyBox = () => {
   return (
     <section id='why' className='my-10 container mx-auto'>
         <div className='grid grid-cols-1
-        sm:grid-cols-2 gap-6 '>
+        sm:grid-cols-3 gap-6 '>
             {Why.map(({name, description, 
             image, icon, bgcolor})=>(
                 <div
-                key={name}
-                style={{ backgroundImage: `url(${image})` }}
+                key={name} 
                 className={`${bgcolor} rounded-xl
-                text-white bg-cover bg-center
-                bg-no-repeat bg-blend-overlay`}
+                text-green/90 transition-all 
+                hover:inset-shadow-sm hover: inset-shadow-secondary duration-300`}
                 >
                  <div className='p-3 md:p-5 
-                 backdrop-blur-sm space-y-3 rounded-xl '>
-                    <i className={`${icon} text-4xl`}></i>
+                  space-y-3 rounded-xl h-full flex flex-col '>
+                    <i className={`${icon} text-3xl text-center px-4 py-2 border border-green/90 bg-secondary/50 mr-auto rounded-lg`}></i>
                     <h1 className='text-2xl font-bold'>{name}</h1>
                     <p className='text-lg'>{description}</p>
                  </div>
