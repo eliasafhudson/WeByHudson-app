@@ -20,11 +20,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleNav = (e, href) => {
-    e.preventDefault()
-    setIsOpen(false)
-    smoothScroll(href)
-  }
 
   return (
     <motion.nav
@@ -53,7 +48,10 @@ const Navbar = () => {
             <li key={link.id}>
               <a
                 href={link.href}
-                onClick={(e) => handleNav(e, link.href)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  smoothScroll(link.href);
+                }}
                 className="text-gray-300 hover:text-four text-sm font-medium transition-colors duration-200 relative group"
               >
                 {link.name}
@@ -90,7 +88,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <AnimatePresence>
+
         {isOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
@@ -103,8 +101,19 @@ const Navbar = () => {
               {navbarLinks.map((link) => (
                 <li key={link.id}>
                   <a
-                    href={link.href}
-                    onClick={(e) => handleNav(e, link.href)}
+                    
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // Ensure the element exists before scrolling
+                      const target = document.querySelector(link.href);
+                      if (target) {
+                        smoothScroll(link.href);
+                      } else {
+                        // Fallback: native scroll to anchor
+                        document.getElementById(link.href.substring(1))?.scrollIntoView({ behavior: 'smooth' });
+                      }
+                      setIsOpen(false);
+                    }}href={link.href}
                     className="block py-3 text-gray-300 hover:text-four border-b border-white/5 transition-colors duration-200"
                   >
                     {link.name}
@@ -124,7 +133,6 @@ const Navbar = () => {
             </ul>
           </motion.div>
         )}
-      </AnimatePresence>
     </motion.nav>
   )
 }
