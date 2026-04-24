@@ -12,7 +12,8 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
     "bootstrap-icons": "^1.13.1",
-    "lightswind": "^3.1.24",
+    "lightswind": "^3.1.25",
+    "lucide-react": "^1.8.0",
     "motion": "^12.38.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",

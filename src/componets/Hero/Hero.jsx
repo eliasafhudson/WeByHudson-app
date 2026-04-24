@@ -1,95 +1,136 @@
-import React from 'react'
-import Personaje from '../../assets/personaje.png'
-import Fondo from '../../assets/Baner.png'
-import {motion} from 'framer-motion'
-import { slipeUp, slipeInFromSide} from '../../utility/animation'
+import { motion } from 'framer-motion'
+import { slipeUp, slipeInFromSide } from '../../utility/animation'
+import { smoothScroll } from '../../utility/animation'
 
-    
 function Hero() {
-
-const bgImagen ={
-      backgroundImage: `url(${Fondo})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      backgroundPosition: 'bottom',
-      position: 'relative',
-    }
-
-
   return (
-    <section className='w-full pt-25 bg-primary' >
-      <div className='container grid grid-cols-1 
-      sm:grid-cols-2 items-center space-y-2 py-12 
-      sm:py-0 sm:h-[600px] mx-auto'>
+    <section className="w-full pt-25 bg-primary">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 items-center gap-12 py-16 sm:py-0 sm:h-150 mx-auto px-4">
 
-        
-        <div>
-          <div className=' text-center sm:text-left mx-3 space-y-2 grid justify-items-center 
-          sm:justify-items-start'>
-            <motion.p 
-          variants={slipeUp(0.4)}
-          initial="initial"
-          animate="animate" 
-            className='inline-flex items-center gap-2 
-            bg-secondary/5
-            border border-secondary  text-secondary text-sm px-4 py-2 rounded-full w-fit mb-6 
-            '>Bienvenidos a WeByHudson</motion.p>
-            <motion.p 
-          variants={slipeUp(0.3)}
-          initial="initial"
-          animate="animate" 
-            className='text-4xl md:text-6xl font-bold text-green'>Diseñamos y 
-            desarrollamos
-            <span className="text-four"> páginas web profesionales </span></motion.p>
-            <motion.p 
-          variants={slipeUp(0.2)}
-          initial="initial"
-          animate="animate" 
-            className='text-lg md:text-xl text-gray-400'>
-              Que mejor forma de crecer en tu 
-              negocio que una pagiana web 100% personalizada
-            </motion.p>
-            <motion.p 
-            variants={slipeInFromSide('left', 0.6)}
-          initial="initial"
-          animate="animate" href="#"
-            className='inline-block primary-btn !px-6 mx-auto'>
+        {/* Texto */}
+        <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-5">
+          <motion.p
+            variants={slipeUp(0.2)}
+            initial="initial"
+            animate="animate"
+            className="inline-flex items-center gap-2 bg-secondary/5 border border-secondary text-secondary text-sm px-4 py-2 rounded-full w-fit"
+          >
+            Bienvenidos a WeByHudson
+          </motion.p>
+
+          <motion.h1
+            variants={slipeUp(0.35)}
+            initial="initial"
+            animate="animate"
+            className="text-4xl md:text-5xl font-bold text-green leading-tight"
+          >
+            Diseñamos y desarrollamos{' '}
+            <span className="text-four">páginas web profesionales</span>
+          </motion.h1>
+
+          <motion.p
+            variants={slipeUp(0.5)}
+            initial="initial"
+            animate="animate"
+            className="text-sm md:text-lg text-gray-400 max-w-md"
+          >
+            La mejor forma de crecer en tu negocio es con una página web
+            100% personalizada.
+          </motion.p>
+
+          <motion.div
+            variants={slipeInFromSide('left', 0.65)}
+            initial="initial"
+            animate="animate"
+            className="flex gap-4 pt-2"
+          >
             <a
-            className='inline-block !px-6 mx-auto'>
-              Comenzemos
-            </a></motion.p>
-          </div>
-        </div>    
-              
-        {/*contenedor de la imagen */} 
-      <motion.div
-          variants={slipeInFromSide('left', 0.5)}
+              href="#proceso"
+              onClick={(e) => { e.preventDefault(); smoothScroll('#proceso') }}
+              className="primary-btn px-6!"
+            >
+              Comenzamos
+            </a>
+            <a
+              href="#precios"
+              onClick={(e) => { e.preventDefault(); smoothScroll('#precios') }}
+              className="primary-btn px-6! text-four font-bold"
+            >
+              Ver planes
+            </a>
+          </motion.div>
+        </div>
+
+        {/* Tarjeta de código */}
+        <motion.div
+          variants={slipeInFromSide('right', 0.5)}
           initial="initial"
           animate="animate"
-          className='bg-five text-white text-sm 
-          font-semibold px-6 py-3 rounded-lg '>
-            {/* Tarjeta de código */}
-          <div className="bg-[#0D1117] border border-[#30363D] rounded-xl p-5 w-72">
+          className="flex justify-center"
+        >
+          <div className="bg-primary border border-[#30363D] rounded-xl p-5 w-72 shadow-xl shadow-four/10">
+            {/* Botones de ventana */}
             <div className="flex gap-2 mb-4">
               <span className="w-3 h-3 rounded-full bg-[#FF5F56]" />
               <span className="w-3 h-3 rounded-full bg-[#FFBD2E]" />
               <span className="w-3 h-3 rounded-full bg-[#27C93F]" />
             </div>
+
+            {/* Código */}
             <div className="font-mono text-xs leading-loose">
-              <p className="text-[#8B949E]">{"// WeByHudson"}</p>
-              <p><span className="text-[#79C0FF]">const </span><span className="text-[#E6EDF3]">web </span><span className="text-[#8B949E]">= </span><span className="text-[#FFA657]">{"{"}</span></p>
-              <p className="pl-4"><span className="text-[#3FB950]">diseño</span><span className="text-[#8B949E]">: </span><span className="text-[#E6EDF3]">"moderno"</span><span className="text-[#8B949E]">,</span></p>
-              <p className="pl-4"><span className="text-[#3FB950]">velocidad</span><span className="text-[#8B949E]">: </span><span className="text-[#E6EDF3]">"100/100"</span><span className="text-[#8B949E]">,</span></p>
-              <p className="pl-4"><span className="text-[#3FB950]">seo</span><span className="text-[#8B949E]">: </span><span className="text-[#E6EDF3]">true</span><span className="text-[#8B949E]">,</span></p>
-              <p className="pl-4"><span className="text-[#3FB950]">resultados</span><span className="text-[#8B949E]">: </span><span className="text-[#E6EDF3]">"garantizados"</span></p>
+              <p className="text-[#8B949E]">{'// WeByHudson'}</p>
               <p>
-                <span className="text-[#FFA657]">{"}"}</span>
-                <span className="text-[#8B949E]">;</span>
-                 <span className={`inline-block w-0.5 h-3.5 bg-[#2EA043] ml-0.5 align-middle transition-opacity animate-pulse`} />
+                <span className="text-[#79C0FF]">const </span>
+                <span className="text-green">web </span>
+                <span className="text-[#8B949E]">= </span>
+                <span className="text-[#FFA657]">{'{'}</span>
               </p>
+              <p className="pl-4">
+                <span className="text-four">diseño</span>
+                <span className="text-[#8B949E]">: </span>
+                <span className="text-green">"moderno"</span>
+                <span className="text-[#8B949E]">,</span>
+              </p>
+              <p className="pl-4">
+                <span className="text-four">velocidad</span>
+                <span className="text-[#8B949E]">: </span>
+                <span className="text-green">"100/100"</span>
+                <span className="text-[#8B949E]">,</span>
+              </p>
+              <p className="pl-4">
+                <span className="text-four">seo</span>
+                <span className="text-[#8B949E]">: </span>
+                <span className="text-green">true</span>
+                <span className="text-[#8B949E]">,</span>
+              </p>
+              <p className="pl-4">
+                <span className="text-four">resultados</span>
+                <span className="text-[#8B949E]">: </span>
+                <span className="text-green">"garantizados"</span>
+              </p>
+              <p>
+                <span className="text-[#FFA657]">{'}'}</span>
+                <span className="text-[#8B949E]">;</span>
+                <span className="inline-block w-0.5 h-3.5 bg-secondary ml-0.5 align-middle animate-pulse" />
+              </p>
+            </div>
+
+            {/* Stats debajo del código */}
+            <div className="mt-5 pt-4 border-t border-[#30363D] grid grid-cols-3 gap-2 text-center">
+              {[
+                { value: '+50', label: 'Proyectos' },
+                { value: '100%', label: 'Responsive' },
+                { value: '5★', label: 'Valoración' },
+              ].map(({ value, label }) => (
+                <div key={label}>
+                  <p className="text-four font-bold text-sm">{value}</p>
+                  <p className="text-[#8B949E] text-xs">{label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </motion.div>
+
       </div>
     </section>
   )
