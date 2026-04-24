@@ -90,7 +90,7 @@ const Footer = () => {
               href="mailto:hola@webyhudson.com"
               className="text-gray-400 text-sm hover:text-four transition-colors duration-200"
             >
-              📧 hola@webyhudson.com
+              <i className="bi bi-envelope-fill mr-1"></i> hola@webyhudson.com
             </a>
             <a
               href="https://wa.me/50764478682"
@@ -98,9 +98,10 @@ const Footer = () => {
               rel="noreferrer"
               className="text-gray-400 text-sm hover:text-four transition-colors duration-200"
             >
-              WhatsApp
+              <i className="bi bi-whatsapp mr-1"></i> WhatsApp
             </a>
-            <span className="text-gray-400 text-sm">Panamá</span>
+            <span className="text-gray-400 text-sm">
+              <i className="bi bi-geo-alt-fill mr-1"></i> Panamá</span>
           </motion.div>
         </motion.div>
 

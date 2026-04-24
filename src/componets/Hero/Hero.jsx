@@ -4,7 +4,7 @@ import { smoothScroll } from '../../utility/animation'
 
 function Hero() {
   return (
-    <section className="w-full pt-25 bg-primary">
+    <section className="w-full pt-20 bg-primary">
       <div className="container grid grid-cols-1 sm:grid-cols-2 items-center gap-12 py-16 sm:py-0 sm:h-150 mx-auto px-4">
 
         {/* Texto */}
@@ -45,8 +45,8 @@ function Hero() {
             className="flex gap-4 pt-2"
           >
             <a
-              href="#proceso"
-              onClick={(e) => { e.preventDefault(); smoothScroll('#proceso') }}
+              href="#contacto"
+              onClick={(e) => { e.preventDefault(); smoothScroll('#contacto') }}
               className="primary-btn px-6!"
             >
               Comenzamos

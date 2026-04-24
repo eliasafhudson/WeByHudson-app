@@ -26,6 +26,8 @@ src/
 │   │   ├── Procesos.jsx     # Header de sección
 │   │   └── ProcesosBox.jsx  # Steps con línea conectora
 │   ├── Planes/              # Sección de precios con card destacada
+│   ├── Faqs/                # Acordeón de preguntas frecuentes
+│   ├── Form/                # Sección Quiénes somos + formulario de contacto
 │   └── Footer/              # Footer con links, contacto y redes sociales
 ├── utility/
 │   └── animation.js         # Variantes de animación reutilizables (slipeUp, slipeInFromSide, fadeIn, fadeInView, scaleIn, smoothScroll)
@@ -70,6 +72,8 @@ npm run dev
 | Servicios  | `#servicios`| 6 cards de servicios con animación stagger al entrar     |
 | Proceso    | `#proceso`  | 4 pasos con línea conectora en desktop                   |
 | Planes     | `#precios`  | 3 planes de precios con card destacada escalada          |
+| FAQs       | `#faqs`     | Acordeón animado con 6 preguntas frecuentes y CTA        |
+| Contacto   | `#contacto` | Quiénes somos con imagen + formulario de contacto        |
 | Footer     | —           | Links, contacto, redes sociales y copyright              |
 
 ## Animaciones

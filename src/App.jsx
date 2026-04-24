@@ -3,6 +3,8 @@ import Hero from './componets/Hero/Hero'
 import Servicios from './componets/Servicios/Servicios'
 import Procesos from './componets/Proceso/Procesos'
 import Planes from './componets/Planes/Planes'
+import Faqs from './componets/Faqs/Faqs'
+import Form from './componets/Form/Form'
 import Footer from './componets/Footer/Footer'
 import { useEffect, useRef } from "react";
 
@@ -105,7 +107,9 @@ function App() {
         <Hero />
         <Servicios />
         <Procesos />
-        <Planes/>
+        <Planes />
+        <Faqs />
+        <Form />
         <Footer />
       </div>
     </div>

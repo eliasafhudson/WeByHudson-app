@@ -5,8 +5,8 @@ import { smoothScroll } from '../../utility/animation'
 
 const navbarLinks = [
   { id: 1, name: 'Servicios', href: '#servicios' },
-  { id: 2, name: 'Proceso',   href: '#proceso'   },
-  { id: 3, name: 'Precios',   href: '#precios'   },
+  { id: 2, name: 'Precios',   href: '#precios'   },
+  { id: 3, name: 'FAQs',   href: '#faqs'   },
   { id: 4, name: 'Contacto',  href: '#contacto'  },
 ]
 
