@@ -7,27 +7,27 @@ import { Plus, Minus } from 'lucide-react'
 const faqs = [
   {
     q: '¿Cuánto tiempo tarda en estar lista mi web?',
-    a: 'Dependiendo del plan, entre 7 y 21 días hábiles. Siempre te mantenemos informado del progreso en cada etapa.',
+    a: 'Dependiendo del plan, pero usualmente entre 7 y 21 días hábiles. De igual manera, siempre te mantendremos informado del progreso en cada etapa de su creación.',
   },
   {
     q: '¿Necesito saber de tecnología?',
-    a: 'Para nada. Nosotros nos encargamos de todo. Solo necesitas tener claro qué quieres para tu negocio.',
+    a: '¡Para nada!. Nosotros nos encargamos de absolutamente todo; solo necesitas tener claro qué deseas para tu negocio.',
   },
   {
-    q: '¿Qué pasa si no me gusta el diseño?',
-    a: 'Incluimos hasta 3 rondas de revisiones sin costo adicional hasta que estés 100% satisfecho con el resultado.',
+    q: '¿Qué sucede si no me gusta el diseño?',
+    a: 'Incluimos 3 revisiones para examinar detenidamente lo que desees cambiar sin ningún costo adicional, para que estés 100% satisfecho con el resultado.',
   },
   {
     q: '¿El precio incluye hosting y dominio?',
-    a: 'El hosting y dominio son costos aparte, pero te asesoramos en las mejores opciones según tu presupuesto y necesidades.',
+    a: 'El hosting y dominio son costos aparte, pero te asesoramos en las mejores opciones según tu presupuesto y tus necesidades.',
   },
   {
-    q: '¿Pueden hacer cambios después de entregar?',
-    a: 'Sí, ofrecemos planes de mantenimiento mensual o puedes contratarnos por cambios puntuales cuando los necesites.',
+    q: '¿Se pueden hacer cambios luego de la entrega?',
+    a: 'Sí, ya que también ofrecemos planes de mantenimiento mensual o si prefieres, puedes contratarnos para cambios puntuales cuando lo necesites.',
   },
   {
     q: '¿Mi web va a funcionar en celulares?',
-    a: 'Absolutamente. Todas nuestras webs son 100% responsive y están optimizadas para móviles, tablets y escritorio.',
+    a: '¡Absolutamente!. Todas nuestras webs son 100% adaptativas (reponsive) y están optimizadas para todo tipo de móviles, tablets y computadoras.',
   },
 ]
 

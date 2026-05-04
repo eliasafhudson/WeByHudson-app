@@ -74,12 +74,12 @@ const Form = () => {
               Somos <span className="text-four">WeByHudson</span>
             </h2>
 
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-400 leading-relaxed text-justify">
               Somos un estudio creativo especializado en transformar ideas en experiencias digitales.
               Nos apasiona ayudar a emprendedores y empresas a destacar en el mundo online mediante
               soluciones web modernas, rápidas y seguras.
             </p>
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-400 leading-relaxed text-justify">
               Trabajamos de forma cercana con cada cliente, entendiendo su negocio antes
               de escribir una sola línea de código. Transparencia, calidad y resultados
               son nuestra promesa.
