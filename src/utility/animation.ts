@@ -1,7 +1,7 @@
 import type { Variants } from 'motion/react'
 
 // ── Slide up desde abajo ──────────────────────────────────────────────────────
-export const slipeUp = (delay = 0): { initial: object; animate: object } => ({
+export const slipeUp = (delay = 0): Variants => ({
   initial: { y: 40, opacity: 0 },
   animate: {
     y: 0,
@@ -14,7 +14,7 @@ export const slipeUp = (delay = 0): { initial: object; animate: object } => ({
 export const slipeInFromSide = (
   direction: 'left' | 'right' = 'left',
   delay = 0
-): { initial: object; animate: object } => ({
+): Variants => ({
   initial: { x: direction === 'left' ? -80 : 80, opacity: 0 },
   animate: {
     x: 0,
@@ -24,7 +24,7 @@ export const slipeInFromSide = (
 })
 
 // ── Fade in simple ────────────────────────────────────────────────────────────
-export const fadeIn = (delay = 0): { initial: object; animate: object } => ({
+export const fadeIn = (delay = 0): Variants => ({
   initial: { opacity: 0 },
   animate: {
     opacity: 1,
